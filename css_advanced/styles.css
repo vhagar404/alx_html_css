@@ -152,6 +152,49 @@ section:first-of-type h2 span {
     opacity: 0.9;
 }
 
+/* =========================================================
+   QUOTE SECTION (Purple)
+========================================================= */
+
+.quote-section {
+    background-color: #C271FF;
+    padding: 70px 0;
+    color: white;
+}
+
+.quote-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.quote-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.quote-text {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+.quote-author {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.quote-role {
+    font-size: 16px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
 /* ----------------------------------------------------- */
 /* TESTIMONIAL SECTION                                   */
 /* ----------------------------------------------------- */

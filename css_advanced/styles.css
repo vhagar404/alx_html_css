@@ -112,7 +112,7 @@ section:first-of-type button {
 section:first-of-type button:hover {
     opacity: 0.9;
 }
-
+/* “Learn from the pros” */
 section:first-of-type h2 {
     margin-top: 70px;
     font-size: 22px;
@@ -123,7 +123,7 @@ section:first-of-type h2::first-word,
 section:first-of-type h2 span {
     color: #C271FF;
 }
-
+/* PRO CARDS */
 .pro-cards {
     display: flex;
     justify-content: center;

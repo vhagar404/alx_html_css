@@ -294,13 +294,13 @@ section:first-of-type h2 span {
 }
 
 .membership h2 span {
-    color: #C271FF; /* Purple word "Free" */
+    color: #C271FF; 
 }
 
 .membership-grid {
     display: flex;
     justify-content: center;
-    gap: 80px; /* More spacing like Figma */
+    gap: 80px; 
     margin-bottom: 60px;
 }
 
@@ -310,7 +310,7 @@ section:first-of-type h2 span {
 }
 
 .member-box img {
-    width: 70px;        /* Slightly larger icons */
+    width: 70px;        
     margin: 0 auto 20px auto;
 }
 
@@ -335,38 +335,46 @@ section:first-of-type h2 span {
 }
 
 
-/* ------------------------------
+/* ============================
    FAQ SECTION
--------------------------------- */
-.faq {
-    padding: 80px;
+   ============================ */
+
+.faq-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.faq-section h2 {
     text-align: center;
+    font-size: 48px;
+    font-weight: 300;
+    color: #091D36;
+    margin-bottom: 80px;
+    letter-spacing: 2px;
 }
 
-.faq h2 {
-    font-size: 32px;
-    margin-bottom: 60px;
+.faq-wrapper {
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 120px;
 }
 
-.faq-grid {
-    display: flex;
-    gap: 100px;
-    justify-content: center;
+.faq-item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0D1B2A;
+    margin-bottom: 15px;
 }
 
-.faq-column {
-    width: 400px;
-    text-align: left;
+.faq-item p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #6A7A89;
+    max-width: 400px;
 }
 
-.faq-column h3 {
-    margin-bottom: 10px;
-}
-
-.faq-column p {
-    margin-bottom: 30px;
-    opacity: 0.8;
-}
 
 /* ------------------------------
    FOOTER

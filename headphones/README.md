@@ -102,28 +102,6 @@ Follow these interaction styles exactly:
 
 ---
 
-## 🚀 Getting Started
-
-### 1. Clone Your Repository
-
-```
-git clone https://github.com/<your-username>/alx_html_css.git
-```
-
-### 2. Navigate to the Project
-
-```
-cd alx_html_css/headphones
-```
-
-### 3. Start Coding
-
-* Open `index.html` in your editor
-* Link your stylesheet (`styles.css`)
-* Begin replicating the layout section by section
-
----
-
 ## ✔️ What Your Final Submission Should Include
 
 * A pixel-perfect recreation of the Figma design

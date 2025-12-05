@@ -1,0 +1,340 @@
+/* =====================================================
+   WHAT WE DO
+===================================================== */
+.what-we-do {
+    padding: 80px 20px;
+    text-align: center;
+    background: white;
+    color: #333;
+}
+
+.what-we-do h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.what-we-do .subtitle {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Service cards container */
+.services {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual cards */
+.service-card {
+    width: 22%;
+    min-width: 200px;
+}
+
+.icon {
+    font-size: 60px;
+    color: #FF6565;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* MOBILE VERSION */
+@media (max-width: 480px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 90%;
+        margin-bottom: 40px;
+    }
+}
+
+/* ===========================
+   OUR RESULTS (CSS pentagons)
+   =========================== */
+
+.results {
+  /* if you previously used a background image, remove it */
+  background: linear-gradient(180deg, #0b1220 0%, #071629 100%); /* fallback BG */
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.results-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.results h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.results-intro {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* grid */
+.results-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* each result box */
+.result-item {
+  width: 22%;
+  min-width: 200px;
+  text-align: center;
+}
+
+/* ---------- PENTAGON ---------- */
+/* approach: build pentagon from two CSS triangles (top & bottom) */
+.pentagon {
+  width: 0;
+  margin: 0 auto 18px;
+  position: relative;
+  /* lower triangle (main body) */
+  border-style: solid;
+  border-width: 0 48px 70px 48px; /* left/right influence width, bottom gives height */
+  border-color: transparent transparent #FF6565 transparent; /* base color */
+  /* optional shadow */
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
+}
+
+/* top small inverted triangle to form the pentagon top */
+.pentagon::after {
+  content: "";
+  position: absolute;
+  left: -48px; /* negative half of the bottom border widths */
+  top: -42px;  /* moves the top triangle above the main body */
+  width: 0;
+  border-style: solid;
+  border-width: 42px 48px 0 48px;
+  border-color: #FF6565 transparent transparent transparent;
+}
+
+/* Add a subtle inner highlight, optional */
+.pentagon::before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: -8px;
+  width: 56px;
+  height: 42px;
+  transform: rotate(-12deg);
+  opacity: 0.06;
+  background: #fff;
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+/* result headings & copy */
+.result-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.result-item p {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ----------------- Responsive ----------------- */
+@media (max-width: 768px) {
+  .results-grid {
+    gap: 24px;
+  }
+  .result-item {
+    width: 45%;
+    min-width: 220px;
+    margin-bottom: 30px;
+  }
+  .pentagon { border-width: 0 42px 62px 42px; }
+  .pentagon::after { left: -42px; top: -36px; border-width: 36px 42px 0 42px; }
+}
+
+@media (max-width: 480px) {
+  .results-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .result-item {
+    width: 90%;
+  }
+  /* scale down pentagon on small screens */
+  .pentagon { transform: scale(0.9); }
+  .pentagon::after { transform: scale(0.9); transform-origin: center top; }
+}
+
+
+/* ===========================
+   CONTACT FORM
+   =========================== */
+
+.contact {
+    padding: 100px 0;
+    text-align: center;
+    background: white;
+}
+
+.contact-container {
+    width: 80%;
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact h2 {
+    font-size: 2.3rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Form styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  .contact-form {
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+  
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.input-group textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* On focus */
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #FF4F6F;
+    box-shadow: 0 0 5px rgba(255, 79, 111, 0.4);
+}
+
+/* Submit button */
+.btn-submit {
+    background: #FF4F6F;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #e03b57;
+    transform: translateY(-3px);
+}
+@media (max-width: 768px) {
+    .contact-container {
+        width: 90%;
+    }
+
+    .contact h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+.footer {
+    background: #071629;
+    padding: 60px 0 30px;
+    color: white;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap; /* Needed for mobile */
+}
+
+/* Logo */
+.footer-logo img {
+    height: 35px;
+}
+
+/* Social Icons */
+.footer-socials a img {
+    height: 25px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+@media (max-width: 480px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-socials a img {
+        height: 28px;
+        margin: 0 15px;
+    }
+}
+
+
+.footer-socials a img:hover {
+    opacity: 0.7;
+}
+
+/* Copyright */
+.footer p {
+    margin-top: 25px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}

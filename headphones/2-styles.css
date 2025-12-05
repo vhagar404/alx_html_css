@@ -130,4 +130,15 @@
     font-size: 1rem;
     opacity: 0.9;
 }
+@media (max-width: 768px) {
+    .results p {
+        width: 90%;
+    }
+
+    .results-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
 
